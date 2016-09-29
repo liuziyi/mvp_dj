@@ -19,7 +19,7 @@
           <ul class="dropdown-menu">
               <li><a href="{% url 'categories' %}">All</a></li>
           {% for category in categories %}
-              <li><a href="{% url 'category_detail' category.slug %}">{{category}}</a></li>
+              <li><a href="{% url 'events' %}">{{category}}</a></li>
           {% endfor %}
           </ul>
         </li>
