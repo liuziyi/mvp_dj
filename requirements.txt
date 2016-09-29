@@ -1,0 +1,7 @@
+django==1.8.9
+gunicorn
+dj-database-url
+whitenoise
+psycopg2
+django-extensions
+pillow

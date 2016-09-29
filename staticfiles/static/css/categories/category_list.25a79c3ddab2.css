@@ -1,0 +1,37 @@
+/***********************************/
+/********** GENERAL ****************/
+/***********************************/
+
+a{
+	color: #424242;
+}
+
+a:hover{
+	color: #3F51B5;
+	text-decoration: none;
+}
+
+/***********************************/
+/********** HEADING ****************/
+/***********************************/
+
+#hr-main-header-category-list{
+	border-top: 10px solid #4A4A4A;
+	width: 100px;
+	padding-bottom: 50px;
+}
+
+/***********************************/
+/************* BODY ****************/
+/***********************************/
+
+#container-category-list{
+	padding: 50px 0;
+}
+
+#hr-divider-category-list{
+	border-top: 1px solid #4A4A4A;
+	width: 1100px;
+}
+
+

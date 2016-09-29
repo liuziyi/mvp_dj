@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include 'navbar/navbar_category.html' %}
+
+<div class="container">
+    <h1 class="text-center">Tennis Events in Singapore</h1>
+    <hr id="hr-main-header"> <br>
+    <hr id="hr-divider">
+    <div class="event_list_container">
+    {% regroup object_list by start_date|date:"M Y" as start_date_list %}
+      <ul>
+      {% for start in start_date_list %}
+        <li><h1 class="text-center">{{start.grouper}}</h1></li> <hr id="hr-month"> <br>
+        <ul id="event_list">
+        {% for event in start.list %}
+          <li>
+            <h4><b><a href="{{event.link}}">{{event.title}}</a></b></h4>
+            <p><b>Start:</b> {{event.start_date| date:"d M, Y"}}</p>
+            <p><b>End:</b> {{event.end_date| date:"d M, Y"}}</p>
+            <p><b>Deadline:</b> {{event.deadline| date:"d M, Y"}}</p>
+            <p><b>Venue:</b> {{event.venue}}</p>
+          </li>
+        {% endfor %}  
+        </ul> <hr id="hr-divider">
+      {% endfor %}  
+      </ul> 
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+

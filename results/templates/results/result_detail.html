@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include 'navbar/navbar_category.html' %}
+
+<div class="container"> <br>
+    <h1 class="text-center">{{object}}</h1> 
+    <hr id="hr-main-header-result-detail"> 
+    <hr id="hr-divider-result-detail"/>
+    {% regroup result_details by category as category_list %}
+    <ul>
+    {% for category in category_list %}
+        <li>
+            <h1 class="text-center">{{category.grouper}}</h1> <hr id="hr-category"> 
+        </li>    
+        <ul>
+        {% for result in category.list %}
+            <li>
+                <div class="row">
+                    <div class="col-sm-2 col-sm-offset-4">
+                       {{result.title}} 
+                    </div>
+                    <div class="col-sm-4">
+                       {{result.name_of_winner}} 
+                    </div>
+                </div> 
+            </li> 
+        {% endfor %}    
+        </ul> <hr id="hr-divider"/>
+    {% endfor %}
+    </ul>
+    <br>
+ </div>
+{% endblock %}

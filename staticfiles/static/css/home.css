@@ -1,0 +1,91 @@
+/*********************************************/
+/******************* GENERAL ****************/
+/*********************************************/
+
+.home-body{
+	height: 100%;
+}
+
+/*********************************************/
+/********** MARKETING HEADING ****************/
+/*********************************************/
+
+/*Remove space between navbar and jumbotron container*/
+.navbar{
+	margin-bottom: 0px;
+}
+
+#hr-jumbotron{
+	border-top: 10px solid #3F51B5;
+	width: 100px;
+}
+
+/**********************************/
+/********** USERS ****************/
+/*********************************/
+
+#users{
+	padding-bottom: 50px;
+}
+
+#users hr{
+	border-top: 10px solid #4A4A4A;
+	width: 100px;
+}
+
+/********************************************/
+/********** EVENT ORGANISERS ****************/
+/*******************************************/
+
+#event-orgs{
+	background-color: #3F51B5;
+  	color: #FFFFFF;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#event-orgs hr{
+	border-top: 10px solid #FFFFFF;
+	width: 100px;
+}
+
+/********************************************/
+/********** CATEGORIES **********************/
+/*******************************************/
+
+#categories{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#categories hr{
+	border-top: 10px solid #4A4A4A;
+	width: 100px;
+}
+
+/********************************************/
+/********** CONTACT ************************/
+/*******************************************/
+
+#contact{
+	background-color: #4A4A4A;
+  	color:  #FFFFFF;
+  	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#contact hr{
+	border-top: 10px solid #FFFFFF;
+	width: 100px;
+}
+
+/********************************************/
+/********** FOOTER ************************/
+/*******************************************/
+
+#footer{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#footer a{
+	color: #424242;
+}

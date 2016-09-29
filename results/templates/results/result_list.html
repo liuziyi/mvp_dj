@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include 'navbar/navbar_category.html' %}
+
+<div class="container">
+  <h1 class="text-center">Results</h1>
+  <hr id="hr-main-header"> <br>
+  <hr id="hr-divider">
+  <div class="event_list_container">
+  {% regroup object_list by date|date:"M Y" as month_list %}
+    <ul>
+    {% for month in month_list %}
+      <li><h1 class="text-center">{{month.grouper}}</h1></li> <hr id="hr-month"> <br>
+      <ul id="event_list">
+      {% for event in month.list %}
+        <li>
+          <div class="row">
+            <div class="col-sm-6">
+              <a href="{% url 'result_detail' event.id %}">{{event.event}}</a> 
+            </div>
+            <div class="col-sm-2">
+              {{event.date| date:"M d"}}
+            </div>
+          </div>
+        </li>
+      {% endfor %}  
+      </ul> <hr id="hr-divider">
+    {% endfor %}  
+    </ul> 
+  </div>
+</div>
+{% endblock %}

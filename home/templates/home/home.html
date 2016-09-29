@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include 'navbar/navbar_main.html' %}
+
+<div class="home-body">
+
+    <div class="jumbotron">
+      <div class="row text-center">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h1>Norbb</h1>
+          <hr id="hr-jumbotron">
+        </div>
+        <div class="col-sm-6 col-sm-offset-3">
+          <p>All Things Event Related</p>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Users -->
+  <div id="users" class="row text-center">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h2>USERS</h2>
+        <hr/>
+      </div>
+      <div class="col-sm-4">
+        <i class="fa fa-calendar fa-4x"></i>
+        <h2>Reminders</h2>
+        <p> Receive reminders to sign up for events</p>
+          <p>Do not miss out on events that interest you</p>
+      </div>
+        <div class="col-sm-4">
+          <i class="fa fa-users fa-4x"></i>
+          <h2>Social</h2>
+          <p>Share event you went for or will be going for, photos, videos and results of past events with your followers</p>
+            <p>Follow events, event organizers and people that interest you</p>
+        </div>
+        <div class="col-sm-4">
+          <i class="fa fa-database fa-4x"></i>
+          <h2>Store</h2>
+          <p>Keep photos and videos of past events you went for in one place</p>
+        </div>
+  </div>
+
+  <!-- Event Organisers -->
+  <div id="event-orgs">
+      <div class="row text-center">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2>EVENT ORGANISERS</h2>
+          <hr/>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-bullhorn"></i>
+          <h2>Promote</h2>
+          <p>Target audience</p>
+          <p>Wide Exposure</p>
+        </div>
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-bell"></i>
+          <h2>Remind</h2>
+          <p>Remind users to sign up for your event</p>
+        </div>
+        <div class="col-sm-4">
+          <i class="fa fa-4x fa-globe"></i>
+          <h2>Update</h2>
+          <p>Provide updates during your event</p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm-6">
+          <i class="fa fa-4x fa-picture-o"></i>
+          <h2>Showcase</h2>
+          <p>Showcase photos and videos of past events your organized</p>
+        </div>
+        <div class="col-sm-6">
+          <i class="fa fa-4x fa-area-chart"></i>
+          <h2>Data</h2>
+          <p>Track, analyze and optimize your promotional activities.</p>
+          <p>We show you what is working and what is not across all campaigns, mobile and web</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Categories -->
+    <div id="categories">
+      <div class="row text-center">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2>CATEGORIES CURRENTLY AVALIABLE</h2>
+          <hr/>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm-6 col-sm-offset-3">
+        {% for category in categories %}
+          <h3><a href="{% url 'category_detail' category.slug %}">{{category}}</a></h3>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact -->
+    <div id="contact">
+      <div class="row text-center">
+      </div>
+      <div class="row text-center">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h2>CONTACT</h2>
+          <hr/>
+        </div>
+        <div class="col-sm-6 col-sm-offset-3">
+          <h3>ziyi@norbb.com</h3>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

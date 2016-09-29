@@ -1,0 +1,40 @@
+/***********************************/
+/********** GENERAL ****************/
+/***********************************/
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	color: #424242;
+}
+
+a:hover{
+	color: #3F51B5;
+	text-decoration: none;
+}
+
+/***********************************/
+/********** HEADING ****************/
+/***********************************/
+
+#hr-main-header-result-detail{
+	border-top: 10px solid #4A4A4A;
+	width: 600px;
+	padding-bottom: 50px;
+}
+
+/***********************************/
+/************* BODY ****************/
+/***********************************/
+
+#hr-divider-result-detail{
+	border-top: 1px solid #4A4A4A;
+	width: 1100px;
+}
+
+#hr-category{
+	border-top: 10px solid #4A4A4A;
+	width: 100px;
+}
